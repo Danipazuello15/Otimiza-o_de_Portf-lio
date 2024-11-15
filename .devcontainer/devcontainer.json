@@ -1,0 +1,24 @@
+{
+    "image": "mcr.microsoft.com/devcontainers/universal:2",
+    "features": {
+        "ghcr.io/devcontainers/features/python:1": {},
+        "ghcr.io/devcontainers/features/r:1": {},
+        "ghcr.io/devcontainers/features/docker-in-docker:1": {}  // Para contêineres com suporte Docker, útil para MLOps
+    },
+    "extensions": [
+        "ms-python.python",
+        "reditorsupport.r",
+        "ms-toolsai.jupyter",
+        "ms-toolsai.jupyter-keymap",
+        "ms-toolsai.jupyter-renderers",
+        "ms-vscode-remote.remote-containers",
+        "ms-azuretools.vscode-docker",
+        "ms-toolsai.datawrangler"  // Extensão para manipulação de dados
+    ],
+    "postCreateCommand": "pip install -r requirements.txt",
+    "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python3",
+        "r.rterm.linux": "/usr/local/bin/R",
+        "terminal.integrated.defaultProfile.linux": "bash"
+    }
+}
