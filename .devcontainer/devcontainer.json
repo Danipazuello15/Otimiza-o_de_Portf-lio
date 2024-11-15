@@ -1,18 +1,19 @@
 {
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
-  "features": {
-    "ghcr.io/devcontainers/features/python:1": {
-      "version": "3.8"
+    "image": "mcr.microsoft.com/devcontainers/universal:2",
+    "features": {
+        "ghcr.io/devcontainers/features/python:1": {
+            "version": "3.8"
+        },
+        "ghcr.io/devcontainers/features/r:1": {
+            "version": "4.1"
+        }
     },
-    "ghcr.io/devcontainers/features/r:1": {
-      "version": "4.1"
-    }
-  },
-  "extensions": [
-    "ms-python.python",
-    "ikuyadeu.r",
-    "ms-toolsai.jupyter",
-    "yzhang.markdown-all-in-one"
-  ],
-  "postCreateCommand": "pip install numpy pandas matplotlib seaborn scipy && Rscript -e 'install.packages(c(\"ggplot2\", \"dplyr\", \"caret\"), repos=\"http://cran.us.r-project.org\")'"
+    "extensions": [
+        "ms-python.python",               // Suporte a Python
+        "ikuyadeu.r",                     // Suporte a R
+        "ms-toolsai.jupyter",             // Suporte a Jupyter Notebooks
+        "yzhang.markdown-all-in-one"      // Markdown para documentação
+    ],
+    "postCreateCommand": "pip install numpy pandas matplotlib seaborn scikit-learn jupyter && Rscript -e 'install.packages(c(\"ggplot2\", \"dplyr\", \"caret\"), repos=\"https://cloud.r-project.org\")'"
 }
+
